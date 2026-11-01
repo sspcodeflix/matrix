@@ -1,0 +1,127 @@
+.headActions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Coverage summary: main figure, tier bar, then secondary counts. */
+.coverage {
+  padding: 16px 18px; display: grid; gap: 14px 24px;
+  grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
+}
+.covMain { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.covTiers { display: flex; flex-direction: column; gap: 10px; justify-content: center; min-width: 0; }
+.covSecondary {
+  grid-column: 1 / -1; margin: 0; padding-top: 12px; border-top: 1px solid var(--border);
+  display: grid; gap: 8px 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); font-size: 13px;
+}
+.covSecondary dt { font-size: 12px; color: var(--text-muted); }
+.covSecondary dd { margin: 2px 0 0; font-weight: 600; }
+.covSecondary dd span { font-weight: 400; }
+@media (max-width: 760px) {
+  .coverage { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Pipeline */
+.pipeHead {
+  padding: 14px 18px; border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.pipeHeadLeft { display: flex; align-items: center; gap: 4px 12px; flex-wrap: wrap; }
+.previewLink {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; font-size: 13px;
+  font-weight: 500; color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px;
+}
+.attentionNote { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--accent-text); }
+.pipe {
+  list-style: none; margin: 0; padding: 0; display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+/* Narrow layout: current stage first, completed stages in an expandable history. */
+.pipeNarrow { display: none; }
+.pipeNarrowList { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.pipeNarrowList .step { border-right: 0; border-bottom: 1px solid var(--border); }
+.history { border-top: 0; }
+.history > summary {
+  min-height: 44px; display: flex; align-items: center; padding: 0 18px; cursor: pointer;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+}
+.history[open] > summary { border-bottom: 1px solid var(--border); }
+@media (max-width: 699px) {
+  .pipeWide { display: none; }
+  .pipeNarrow { display: block; }
+}
+.owner {
+  align-self: flex-start; font-size: 12px; font-weight: 600; color: var(--text);
+  border: 1px solid var(--border-strong); border-radius: var(--radius-pill); padding: 1px 9px;
+}
+.review .owner { border-color: var(--accent); color: var(--accent-text); }
+.evidence { margin-top: auto; }
+.evidence > summary {
+  cursor: pointer; font-size: 12px; color: var(--text-muted); min-height: 32px; display: inline-flex; align-items: center;
+}
+.scopeNote { margin: -6px 0 0; max-width: 90ch; }
+.step {
+  border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 10px;
+  padding: 0 18px 16px; min-width: 0;
+}
+.step:last-child { border-right: 0; }
+.step.review { background: var(--accent-tint-strong); }
+.bar { height: 4px; margin: 0 -18px 6px; background: var(--border); }
+.done .bar { background: var(--success); }
+.review .bar { background: var(--accent); }
+.stepNo { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--text-muted); }
+.stepBadge {
+  display: inline-flex; align-items: center; gap: 4px; border-radius: var(--radius-pill);
+  padding: 2px 9px; font-size: 11px; font-weight: 600; background: var(--bg-chip); color: var(--text-secondary);
+}
+.done .stepBadge { background: var(--success-tint); color: var(--success-text); }
+.review .stepBadge { background: var(--accent); color: var(--on-accent); }
+.stepSummary { font-size: 13px; line-height: 1.45; color: var(--text-secondary); }
+.stepTools { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); }
+.stepLink {
+  font-size: 13px; font-weight: 500; text-decoration: none; color: var(--accent-text);
+  min-height: 44px; display: inline-flex; align-items: center; margin: -12px 0 -14px;
+}
+.stepWait { font-size: 13px; color: var(--text-secondary); }
+
+/* Table cells */
+.reqTitle { font-weight: 500; }
+.warnText { color: var(--accent-text); }
+.actionLink {
+  color: var(--accent-text); font-weight: 500; text-decoration: none; background: none; border: 0;
+  padding: 0; cursor: pointer; min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; white-space: nowrap;
+}
+.actionLink:hover { text-decoration: underline; }
+
+/* Side cards */
+.bottom { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; align-items: start; }
+.sideCard { padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; }
+.sideHead { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.sideHead h2 { font-size: 14px; }
+.smallBtn { min-height: 44px; font-size: 12px; padding: 0 10px; }
+.sources { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px; }
+.sources li { display: flex; align-items: center; gap: 10px; }
+.sources a { font-weight: 500; text-decoration: none; }
+.srcDetail { margin-left: auto; color: var(--text-muted); font-family: var(--font-mono); font-size: 11px; text-align: right; }
+
+.avatars { display: flex; }
+.avatar {
+  width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 600; border: 2px solid var(--bg-surface); color: var(--on-accent);
+}
+.avatar + .avatar { margin-left: -8px; }
+.avatar:nth-child(3n + 1) { background: var(--inverse-bg); color: var(--inverse-text); }
+.avatar:nth-child(3n + 2) { background: var(--accent); }
+.avatar:nth-child(3n + 3) { background: var(--text-muted); color: var(--bg-surface); }
+.override { border: 1px solid var(--border); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+.overrideTag { font-family: var(--font-mono); font-size: 11px; color: var(--accent-text); }
+
+.runStats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.runStat { border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; background: var(--bg-chip); }
+.runStat strong { font-size: 20px; font-weight: 600; line-height: 1.2; }
+.runStat span { font-size: 11px; color: var(--text-secondary); }
+.runPass { background: var(--success-tint); color: var(--success-text); }
+.runPass span { color: var(--success-text); }
+.runFail { background: var(--accent-tint); color: var(--danger-text); }
+.runFail span { color: var(--danger-text); }
+
+/* DataTable's visually hidden sort labels are absolutely positioned inside its scroll area and can
+   widen the page on phones; clip them here (shared fix: position: relative on DataTable .scroll). */
+.tableWrap { position: relative; overflow-x: clip; overflow-clip-margin: 4px; }

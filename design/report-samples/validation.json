@@ -1,0 +1,48 @@
+{
+  "fixture_relationships_and_counts": "passed",
+  "repeat_generation_byte_identical": true,
+  "workbooks": [
+    {
+      "file": "matrix_harbor-service-desk_coverage_DEMO-SCAN-014_20261030T050000Z_DEMO-RPT-014.xlsx",
+      "sheets": [
+        "Summary",
+        "Requirements",
+        "Test evidence",
+        "Sources"
+      ],
+      "xml_and_internal_links": "passed",
+      "libreoffice_open_resave": "passed"
+    },
+    {
+      "file": "matrix_harbor-service-desk_test-cases_DEMO-SCAN-014_20261030T050000Z_DEMO-RPT-015.xlsx",
+      "sheets": [
+        "Summary",
+        "Test cases",
+        "Steps",
+        "Sources"
+      ],
+      "xml_and_internal_links": "passed",
+      "libreoffice_open_resave": "passed"
+    }
+  ],
+  "pdf": {
+    "pages": 5,
+    "selectable_text_and_all_requirement_ids": "passed",
+    "complete_sample_case_steps": "passed"
+  },
+  "html": {
+    "offline_load": "passed",
+    "external_requests": 0,
+    "all_local_anchors": "passed",
+    "case_count": 6,
+    "step_count": 19,
+    "gap_count": 5,
+    "mobile_page_overflow": false
+  },
+  "limits": [
+    "No Microsoft Excel desktop verification",
+    "No screen-reader audit",
+    "PDF is not tagged/PDF-UA certified",
+    "No runtime export service implemented"
+  ]
+}

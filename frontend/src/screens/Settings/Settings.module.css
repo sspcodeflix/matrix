@@ -1,0 +1,40 @@
+.twoCol {
+  display: grid; gap: 20px; align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+}
+
+.policies { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.policies li {
+  display: flex; gap: 12px; align-items: flex-start; padding: 14px 0; border-top: 1px solid var(--border);
+}
+.policies li:first-child { border-top: 0; }
+.policies input[type='checkbox'] {
+  width: 18px; height: 18px; margin: 2px 0 0; flex-shrink: 0; accent-color: var(--accent);
+}
+.policies label { cursor: pointer; min-height: 24px; }
+
+.track { display: block; height: 8px; border-radius: 999px; background: var(--bg-chip); overflow: hidden; }
+.track > span { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
+
+.usage { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
+
+.dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 16px; margin: 0; font-size: 14px; }
+.dl dt { color: var(--text-muted); }
+.dl dd { margin: 0; }
+
+.pats { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.pats li {
+  display: flex; gap: 12px; align-items: center; flex-wrap: wrap; padding: 14px 0; border-top: 1px solid var(--border);
+}
+
+.fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.themeOptions { display: flex; flex-direction: column; gap: 8px; }
+.themeOption {
+  display: flex; gap: 12px; align-items: center; min-height: 44px; padding: 10px 12px; cursor: pointer;
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+}
+.themeOption:has(input:checked) { border-color: var(--accent); background: var(--accent-tint-strong); }
+.themeOption input { width: 18px; height: 18px; margin: 0; accent-color: var(--accent); flex-shrink: 0; }
+
+.layout { display: grid; gap: 20px; align-items: start; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1280px) { .layout { grid-template-columns: minmax(0, 1fr) 340px; } }

@@ -1,0 +1,36 @@
+.cards { display: flex; gap: 14px; flex-wrap: wrap; }
+.attn {
+  flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 8px;
+  padding: 16px 18px; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--bg-surface);
+}
+.attnTitle { font-size: 15px; font-weight: 600; }
+.body { font-size: 13px; line-height: 1.5; color: var(--text-secondary); }
+.attnLink { font-size: 13px; font-weight: 500; margin-top: auto; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.panel { padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; }
+.panelHead { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.panelHead h2 { font-size: 14px; }
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.tile {
+  display: flex; flex-direction: column; gap: 2px; align-items: flex-start; text-align: left; cursor: pointer;
+  min-height: 60px; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius-md);
+  background: var(--bg-surface); color: var(--text);
+}
+.tile:hover { background: var(--bg-subtle); border-color: var(--border-strong); }
+.tileTitle { font-size: 13px; font-weight: 600; }
+.note { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+.search {
+  display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px;
+  border: 1px solid var(--border-strong); border-radius: var(--radius-md); background: var(--bg-surface); color: var(--text-muted);
+}
+.search input { border: 0; outline: 0; background: transparent; flex: 1; min-width: 0; font-size: 13px; color: var(--text); }
+.search:focus-within { outline: 2px solid var(--accent); outline-offset: 1px; }
+.results { list-style: none; margin: 0; padding: 0; }
+.results li { display: flex; flex-direction: column; gap: 6px; padding: 12px 0; border-top: 1px solid var(--border); }
+.resultMeta { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; color: var(--text-muted); }
+.conflict { font-size: 12px; color: var(--danger-text); }
+.components { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.components li { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
+.srcName { display: flex; flex-direction: column; gap: 2px; }
+.status { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.tableWrap { min-width: 0; display: flex; flex-direction: column; }
+.tableWrap th { position: relative; }

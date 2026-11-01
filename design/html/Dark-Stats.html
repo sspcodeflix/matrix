@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Matrix user stats</title>
+
+</head>
+<body>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1012;color-scheme:dark}
+a{color:#FF6B7D}a:hover{color:#FF8A98}
+</style>
+
+<div style="font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #ECEEF1; background: #0F1012; display: flex; flex-wrap: wrap; min-height: 100vh; min-width: 0">
+
+<aside style="flex: 1 1 240px; min-width: 0; background: #17191D; border-right: 1px solid #2B2F36; display: flex; flex-direction: column; gap: 20px; padding: 16px 12px; box-sizing: border-box">
+  <div style="display: flex; align-items: center; gap: 10px; padding: 4px 8px">
+    <svg width="24" height="24" viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="2" width="6" height="6" rx="1" fill="#ECEEF1"></rect><rect x="11" y="2" width="6" height="6" rx="1" fill="#ECEEF1"></rect><rect x="20" y="2" width="6" height="6" rx="1" fill="#ECEEF1"></rect><rect x="2" y="11" width="6" height="6" rx="1" fill="#ECEEF1"></rect><rect x="11" y="11" width="6" height="6" rx="1" fill="#ECEEF1"></rect><rect x="20" y="11" width="6" height="6" rx="1" fill="#C8102E"></rect><rect x="2" y="20" width="6" height="6" rx="1" fill="#ECEEF1"></rect><rect x="11" y="20" width="6" height="6" rx="1" fill="#ECEEF1"></rect><rect x="20" y="20" width="6" height="6" rx="1" fill="#ECEEF1"></rect></svg>
+    <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em">Matrix</span>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <label for="app-switch" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9AA1AC; text-transform: uppercase; letter-spacing: 0.08em; padding: 0 8px">Application</label>
+    <button id="app-switch" type="button" style="font-family: inherit; display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #3A3F48; background: #17191D; color: #ECEEF1; font-size: 14px; font-weight: 500; text-align: left">
+      <span style="display: flex; flex-direction: column; gap: 1px"><span>Payments Hub</span><span style="font-size: 12px; color: #9AA1AC; font-weight: 400">Release 26.11</span></span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#5B6470" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6l3 3 3-3"></path></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Workspace" style="display: flex; flex-direction: column; gap: 2px">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9AA1AC; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px 6px">Workflows</span>
+    <a href="Dark-Acceptance.html" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; color: #ECEEF1; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9 3h6v3H9z"></path><path d="M9 13l2 2 4-4"></path></svg>
+      Acceptance
+      <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #3A1419; color: #FF8A98; border-radius: 999px; padding: 2px 8px">6 stories</span>
+    </a>
+    <a href="Dark-Workspace.html" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; color: #ECEEF1; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.9-3"></path><path d="M4 4v4h4"></path><path d="M4 13a8 8 0 0 0 14.9 3"></path><path d="M20 20v-4h-4"></path></svg>
+      Regression
+      <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #3A1419; color: #FF8A98; border-radius: 999px; padding: 2px 8px">11 gaps</span>
+    </a>
+    <a href="Dark-Explore.html" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; color: #ECEEF1; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M15.5 8.5l-2 5-5 2 2-5z"></path></svg>
+      Journeys
+      <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #24272D; color: #B9BFC8; border-radius: 999px; padding: 2px 8px">3 new</span>
+    </a>
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9AA1AC; text-transform: uppercase; letter-spacing: 0.08em; padding: 14px 10px 6px">Workspace</span>
+    <a href="Dark-Review.html" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; color: #ECEEF1; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"></circle><circle cx="6" cy="18" r="2.5"></circle><circle cx="18" cy="18" r="2.5"></circle><path d="M6 8.5v7"></path><path d="M18 15.5V9a3 3 0 0 0-3-3h-4"></path><path d="M13 4l-2 2 2 2"></path></svg>
+      Review queue
+      <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #3A1419; color: #FF8A98; border-radius: 999px; padding: 2px 8px">3</span>
+    </a>
+    <a href="Dark-Runs.html" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; color: #ECEEF1; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+      Runs
+      <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #24272D; color: #B9BFC8; border-radius: 999px; padding: 2px 8px">6 failed</span>
+    </a>
+    <a href="Dark-Huddle.html" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; color: #ECEEF1; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M3 19c0-3 3-5 6-5s6 2 6 5"></path><path d="M15 14c3 0 6 1.5 6 4.5"></path></svg>
+      Huddle
+      <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #24272D; color: #B9BFC8; border-radius: 999px; padding: 2px 8px">1</span>
+    </a>
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9AA1AC; text-transform: uppercase; letter-spacing: 0.08em; padding: 14px 10px 6px">Knowledge OS</span>
+    <a href="Dark-Context.html" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; color: #ECEEF1; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"></ellipse><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"></path><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path></svg>
+      App context
+      <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #3A1419; color: #FF8A98; border-radius: 999px; padding: 2px 8px">2 issues</span>
+    </a>
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9AA1AC; text-transform: uppercase; letter-spacing: 0.08em; padding: 14px 10px 6px">Admin</span>
+    <a href="Dark-Skills.html" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; color: #ECEEF1; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"></path><path d="M5 17a3 3 0 0 1 3-3h11"></path></svg>
+      <span style="display: inline-flex; align-items: center">Skills<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Admin only" style="margin-left: 6px; opacity: 0.75"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></span>
+    </a>
+    <a href="Dark-PromptStudio.html" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; color: #ECEEF1; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 9l3 3-3 3"></path><path d="M12 15h5"></path></svg>
+      Prompt studio
+    </a>
+    <a href="Dark-Stats.html" aria-current="page" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; background: #3A1419; color: #FF6B7D; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg>
+      User stats
+    </a>
+    <a href="Dark-Settings.html" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 10px; border-radius: 8px; color: #ECEEF1; text-decoration: none; font-size: 14px; font-weight: 500">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"></path></svg>
+      Settings
+    </a>
+  </nav>
+
+  <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px">
+    <div style="display: flex; align-items: center; gap: 8px; padding: 10px; border-radius: 8px; background: #0F1012; font-size: 12px; color: #B9BFC8">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: #15803D; display: inline-block"></span>
+      <span>Tachyon · Gemini · team license</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; padding: 8px">
+      <span style="width: 32px; height: 32px; border-radius: 50%; background: #ECEEF1; color: #111317; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600">PN</span>
+      <span style="display: flex; flex-direction: column; gap: 1px; min-width: 0"><span style="font-size: 13px; font-weight: 500">Priya N.</span><span style="font-size: 12px; color: #9AA1AC">QA Engineer · SSO</span></span>
+    </div>
+  </div>
+</aside>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+  <div style="background: #17191D; border-bottom: 1px solid #2B2F36; padding: 12px 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #9AA1AC">
+      <a href="#apps" style="color: #9AA1AC; text-decoration: none">Payments Hub</a>
+      <span aria-hidden="true">/</span>
+      <span style="color: #ECEEF1; font-weight: 500">User stats</span>
+    </div>
+    <label style="flex: 1 1 320px; min-width: 0; display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 8px; border: 1px solid #3A3F48; background: #17191D; color: #9AA1AC; font-size: 14px">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+      <input type="search" placeholder="Search stories, requirements, tests, runs, or type / for a command" style="font-family: inherit; flex: 1; min-width: 0; border: 0; outline: 0; font-size: 14px; color: #ECEEF1; background: transparent">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; border: 1px solid #2B2F36; border-radius: 4px; padding: 2px 6px">/</span>
+    </label>
+    <div style="display: flex; align-items: center; gap: 8px; margin-left: auto">
+      <button type="button" style="font-family: inherit; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #3A3F48; background: #17191D; color: #ECEEF1; font-size: 14px; font-weight: 500">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.9-3"></path><path d="M4 4v4h4"></path><path d="M4 13a8 8 0 0 0 14.9 3"></path><path d="M20 20v-4h-4"></path></svg>
+        Refresh
+      </button>
+      <a href="Stats.html" aria-label="Switch to light theme" title="Switch to light theme" style="width: 40px; height: 40px; border-radius: 8px; border: 1px solid #3A3F48; background: #17191D; color: #ECEEF1; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; flex-shrink: 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></a>
+      <button type="button" aria-label="Notifications" style="font-family: inherit; width: 40px; height: 40px; border-radius: 8px; border: 1px solid #3A3F48; background: #17191D; color: #ECEEF1; display: inline-flex; align-items: center; justify-content: center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <div style="padding: 28px 24px 32px; display: flex; flex-direction: column; gap: 24px; min-width: 0">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <h1 style="margin: 0; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">User stats</h1>
+        <span style="font-size: 13px; color: #9AA1AC">How Matrix is used · Payments Hub · last 30 days</span>
+      </div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap"><button type="button" style="font-family: inherit; min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #3A3F48; background: #17191D; color: #ECEEF1; font-size: 14px; font-weight: 500; white-space: nowrap">Last 30 days</button><button type="button" aria-haspopup="dialog" style="font-family: inherit; min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #3A3F48; background: #17191D; color: #ECEEF1; font-size: 14px; font-weight: 500; white-space: nowrap">Download report</button></div>
+    </div>
+    <div style="display: flex; gap: 14px; flex-wrap: wrap">
+      <div style="flex: 1 1 180px; min-width: 0; background: #17191D; border: 1px solid #2B2F36; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 12px; color: #9AA1AC">Active users</span>
+        <span style="font-size: 28px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">18</span>
+        <span style="font-size: 12px; color: #9AA1AC">used Matrix this month</span>
+      </div>
+      <div style="flex: 1 1 180px; min-width: 0; background: #17191D; border: 1px solid #2B2F36; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 12px; color: #9AA1AC">Tests written</span>
+        <span style="font-size: 28px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">412</span>
+        <span style="font-size: 12px; color: #9AA1AC">174 acceptance · 238 regression</span>
+      </div>
+      <div style="flex: 1 1 180px; min-width: 0; background: #17191D; border: 1px solid #2B2F36; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 12px; color: #9AA1AC">Accepted as written</span>
+        <span style="font-size: 28px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">71<span style="font-size: 16px; color: #9AA1AC">%</span></span>
+        <span style="font-size: 12px; color: #9AA1AC">no edits before accepting</span>
+      </div>
+      <div style="flex: 1 1 180px; min-width: 0; background: #17191D; border: 1px solid #2B2F36; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 12px; color: #9AA1AC">Tachyon tokens</span>
+        <span style="font-size: 28px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">41.2M</span>
+        <span style="font-size: 12px; color: #9AA1AC">62% of the team license</span>
+      </div>
+      <div style="flex: 1 1 180px; min-width: 0; background: #17191D; border: 1px solid #2B2F36; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 12px; color: #9AA1AC">Tokens per accepted test</span>
+        <span style="font-size: 28px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">140k</span>
+        <span style="font-size: 12px; color: #9AA1AC">down from 182k last month</span>
+      </div>
+    </div>
+    <section aria-labelledby="tc-heading" style="background: #17191D; border: 1px solid #2B2F36; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap">
+            <h2 id="tc-heading" style="margin: 0; font-size: 16px; font-weight: 600">Tests created: acceptance vs regression</h2>
+            <span style="font-size: 12px; color: #9AA1AC">412 tests · last 30 days</span>
+          </div>
+          <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-end">
+            <div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+              <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #B9BFC8"><span style="width: 10px; height: 10px; border-radius: 2px; background: #ECEEF1; display: inline-block"></span>Acceptance</span>
+              <span style="font-size: 30px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">174 <span style="font-size: 14px; font-weight: 500; color: #9AA1AC">42%</span></span>
+              <span style="font-size: 12px; color: #9AA1AC">Test cases from Jira stories · 78% accepted as written</span>
+            </div>
+            <div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+              <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #B9BFC8"><span style="width: 10px; height: 10px; border-radius: 2px; background: #C8102E; display: inline-block"></span>Regression</span>
+              <span style="font-size: 30px; font-weight: 600; letter-spacing: -0.02em; line-height: 1">238 <span style="font-size: 14px; font-weight: 500; color: #9AA1AC">58%</span></span>
+              <span style="font-size: 12px; color: #9AA1AC">Automation for gaps · 66% accepted as written</span>
+            </div>
+            <div role="img" aria-label="Weekly tests created, rising from 79 to 130; regression is higher than acceptance every week" style="flex: 2 1 320px; min-width: 0; display: flex; gap: 8px; border-bottom: 1px solid #2B2F36; padding-bottom: 2px">
+              <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 6px">
+              <div style="height: 120px; width: 100%; display: flex; align-items: flex-end; justify-content: center; gap: 6px">
+                <span title="31 acceptance" style="width: 28%; max-width: 36px; height: 24%; background: #ECEEF1; border-radius: 3px 3px 0 0"></span>
+                <span title="48 regression" style="width: 28%; max-width: 36px; height: 37%; background: #C8102E; border-radius: 3px 3px 0 0"></span>
+              </div>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9AA1AC">5 Oct</span>
+            </div><div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 6px">
+              <div style="height: 120px; width: 100%; display: flex; align-items: flex-end; justify-content: center; gap: 6px">
+                <span title="40 acceptance" style="width: 28%; max-width: 36px; height: 31%; background: #ECEEF1; border-radius: 3px 3px 0 0"></span>
+                <span title="55 regression" style="width: 28%; max-width: 36px; height: 42%; background: #C8102E; border-radius: 3px 3px 0 0"></span>
+              </div>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9AA1AC">12 Oct</span>
+            </div><div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 6px">
+              <div style="height: 120px; width: 100%; display: flex; align-items: flex-end; justify-content: center; gap: 6px">
+                <span title="46 acceptance" style="width: 28%; max-width: 36px; height: 35%; background: #ECEEF1; border-radius: 3px 3px 0 0"></span>
+                <span title="62 regression" style="width: 28%; max-width: 36px; height: 48%; background: #C8102E; border-radius: 3px 3px 0 0"></span>
+              </div>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9AA1AC">19 Oct</span>
+            </div><div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 6px">
+              <div style="height: 120px; width: 100%; display: flex; align-items: flex-end; justify-content: center; gap: 6px">
+                <span title="57 acceptance" style="width: 28%; max-width: 36px; height: 44%; background: #ECEEF1; border-radius: 3px 3px 0 0"></span>
+                <span title="73 regression" style="width: 28%; max-width: 36px; height: 56%; background: #C8102E; border-radius: 3px 3px 0 0"></span>
+              </div>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9AA1AC">26 Oct</span>
+            </div>
+            </div>
+          </div>
+          <div style="height: 10px; border-radius: 999px; overflow: hidden; display: flex" aria-hidden="true"><span style="width: 42%; background: #ECEEF1"></span><span style="width: 58%; background: #C8102E"></span></div>
+        </section>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start">
+      <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px"><section aria-labelledby="ty-heading" style="background: #17191D; border: 1px solid #2B2F36; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap">
+            <h2 id="ty-heading" style="margin: 0; font-size: 16px; font-weight: 600">Tachyon usage per day</h2>
+            <span style="font-size: 12px; color: #9AA1AC">Tokens, all workflows · weekends shown lighter</span>
+          </div>
+          <div role="img" aria-label="Daily Tachyon tokens for October, between 0.3 and 2.4 million, peaking on 22 October" style="height: 160px; display: flex; align-items: flex-end; gap: 3px; border-bottom: 1px solid #2B2F36"><span title="1.1M tokens" style="flex: 1; min-width: 4px; height: 46%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.3M tokens" style="flex: 1; min-width: 4px; height: 54%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="0.9M tokens" style="flex: 1; min-width: 4px; height: 38%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="0.4M tokens" style="flex: 1; min-width: 4px; height: 17%; background: #7A2533; border-radius: 3px 3px 0 0"></span><span title="0.3M tokens" style="flex: 1; min-width: 4px; height: 12%; background: #7A2533; border-radius: 3px 3px 0 0"></span><span title="1.4M tokens" style="flex: 1; min-width: 4px; height: 58%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.6M tokens" style="flex: 1; min-width: 4px; height: 67%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.5M tokens" style="flex: 1; min-width: 4px; height: 62%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.2M tokens" style="flex: 1; min-width: 4px; height: 50%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.8M tokens" style="flex: 1; min-width: 4px; height: 75%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="0.5M tokens" style="flex: 1; min-width: 4px; height: 21%; background: #7A2533; border-radius: 3px 3px 0 0"></span><span title="0.4M tokens" style="flex: 1; min-width: 4px; height: 17%; background: #7A2533; border-radius: 3px 3px 0 0"></span><span title="1.7M tokens" style="flex: 1; min-width: 4px; height: 71%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.9M tokens" style="flex: 1; min-width: 4px; height: 79%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="2.1M tokens" style="flex: 1; min-width: 4px; height: 88%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.6M tokens" style="flex: 1; min-width: 4px; height: 67%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.4M tokens" style="flex: 1; min-width: 4px; height: 58%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="0.6M tokens" style="flex: 1; min-width: 4px; height: 25%; background: #7A2533; border-radius: 3px 3px 0 0"></span><span title="0.3M tokens" style="flex: 1; min-width: 4px; height: 12%; background: #7A2533; border-radius: 3px 3px 0 0"></span><span title="1.5M tokens" style="flex: 1; min-width: 4px; height: 62%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.8M tokens" style="flex: 1; min-width: 4px; height: 75%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="2.4M tokens" style="flex: 1; min-width: 4px; height: 100%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="2.0M tokens" style="flex: 1; min-width: 4px; height: 83%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.7M tokens" style="flex: 1; min-width: 4px; height: 71%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="0.5M tokens" style="flex: 1; min-width: 4px; height: 21%; background: #7A2533; border-radius: 3px 3px 0 0"></span><span title="0.4M tokens" style="flex: 1; min-width: 4px; height: 17%; background: #7A2533; border-radius: 3px 3px 0 0"></span><span title="1.6M tokens" style="flex: 1; min-width: 4px; height: 67%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.9M tokens" style="flex: 1; min-width: 4px; height: 79%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="2.2M tokens" style="flex: 1; min-width: 4px; height: 92%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.8M tokens" style="flex: 1; min-width: 4px; height: 75%; background: #C8102E; border-radius: 3px 3px 0 0"></span><span title="1.5M tokens" style="flex: 1; min-width: 4px; height: 62%; background: #C8102E; border-radius: 3px 3px 0 0"></span></div>
+          <div style="display: flex; justify-content: space-between; font-size: 11px; color: #9AA1AC; font-family: 'IBM Plex Mono', monospace"><span>1 Oct</span><span>15 Oct</span><span>31 Oct</span></div>
+        </section>
+        <section aria-labelledby="ut-heading" style="background: #17191D; border: 1px solid #2B2F36; border-radius: 10px; display: flex; flex-direction: column; gap: 12px; min-width: 0">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; padding: 14px 18px; border-bottom: 1px solid #2B2F36">
+            <h2 id="ut-heading" style="margin: 0; font-size: 16px; font-weight: 600">Usage by person</h2><span style="font-size: 12px; color: #9AA1AC">Last 30 days · Payments Hub</span>
+          </div>
+          <div style="padding: 12px 18px; border-bottom: 1px solid #2B2F36; display: flex; gap: 10px; align-items: center; flex-wrap: wrap">
+          <label style="flex: 1 1 260px; min-width: 0; display: flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 10px; border: 1px solid #3A3F48; border-radius: 6px; background: #17191D; color: #9AA1AC">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+            <input type="search" aria-label="Search people" placeholder="Search by name" style="font-family: inherit; flex: 1; min-width: 0; border: 0; outline: 0; font-size: 13px; color: #ECEEF1; background: transparent">
+          </label>
+          <button type="button" style="font-family: inherit; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 12px; border-radius: 6px; border: 1px solid #3A3F48; background: #17191D; color: #ECEEF1; font-size: 13px; font-weight: 500"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"></path></svg>Filters <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #C8102E; color: #FFFFFF; border-radius: 999px; padding: 1px 6px">1</span></button>
+          <span style="display: inline-flex; align-items: center; gap: 6px; min-height: 30px; padding: 0 4px 0 10px; border-radius: 999px; background: #3A1419; color: #FF8A98; font-size: 12px; font-weight: 500">Last 30 days<button type="button" aria-label="Remove filter Last 30 days" style="font-family: inherit; width: 22px; height: 22px; border: 0; border-radius: 50%; background: transparent; color: #FF8A98; display: inline-flex; align-items: center; justify-content: center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></span><button type="button" style="font-family: inherit; min-height: 30px; padding: 0 6px; border: 0; background: transparent; color: #FF6B7D; font-size: 13px; font-weight: 500">Clear all</button>
+        </div>
+        <div style="overflow-x: auto">
+          <table style="width: 100%; min-width: 760px; border-collapse: collapse; font-size: 13px">
+            <thead><tr style="background: #0F1012; color: #9AA1AC; font-family: 'IBM Plex Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; text-align: left"><th scope="col" style="padding: 10px 12px 10px 18px; font-weight: 500">User<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: -1px; margin-left: 4px; opacity: 0.6"><path d="M7 9l5-5 5 5M7 15l5 5 5-5"></path></svg></th><th scope="col" style="padding: 10px 12px; font-weight: 500">Acceptance tests<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: -1px; margin-left: 4px; opacity: 0.6"><path d="M7 9l5-5 5 5M7 15l5 5 5-5"></path></svg></th><th scope="col" style="padding: 10px 12px; font-weight: 500">Regression tests<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: -1px; margin-left: 4px; opacity: 0.6"><path d="M7 9l5-5 5 5M7 15l5 5 5-5"></path></svg></th><th scope="col" style="padding: 10px 12px; font-weight: 500">Items reviewed<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: -1px; margin-left: 4px; opacity: 0.6"><path d="M7 9l5-5 5 5M7 15l5 5 5-5"></path></svg></th><th scope="col" style="padding: 10px 12px; font-weight: 500">Accepted as written<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: -1px; margin-left: 4px; opacity: 0.6"><path d="M7 9l5-5 5 5M7 15l5 5 5-5"></path></svg></th><th scope="col" style="padding: 10px 12px; font-weight: 500">Tachyon tokens<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: -1px; margin-left: 4px; opacity: 0.6"><path d="M7 9l5-5 5 5M7 15l5 5 5-5"></path></svg></th><th scope="col" style="padding: 10px 12px; font-weight: 500">Share of license<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: -1px; margin-left: 4px; opacity: 0.6"><path d="M7 9l5-5 5 5M7 15l5 5 5-5"></path></svg></th></tr><tr style="background: #17191D; border-top: 1px solid #2B2F36; text-align: left; font-family: inherit; text-transform: none; letter-spacing: 0"><td style="padding: 6px 12px 8px 18px"><input type="text" aria-label="Filter by user" placeholder="Name…" style="font-family: inherit; width: 100%; box-sizing: border-box; min-height: 32px; padding: 0 8px; border: 1px solid #3A3F48; border-radius: 6px; background: #17191D; color: #ECEEF1; font-size: 12px"></td><td style="padding: 6px 12px 8px"></td><td style="padding: 6px 12px 8px"></td><td style="padding: 6px 12px 8px"></td><td style="padding: 6px 12px 8px"><select aria-label="Filter by acceptance" style="font-family: inherit; width: 100%; box-sizing: border-box; min-height: 32px; padding: 0 8px; border: 1px solid #3A3F48; border-radius: 6px; background: #17191D; color: #ECEEF1; font-size: 12px"><option>Any</option><option>Below 50%</option><option>50–70%</option><option>Above 70%</option></select></td><td style="padding: 6px 12px 8px"><select aria-label="Filter by tokens" style="font-family: inherit; width: 100%; box-sizing: border-box; min-height: 32px; padding: 0 8px; border: 1px solid #3A3F48; border-radius: 6px; background: #17191D; color: #ECEEF1; font-size: 12px"><option>Any</option><option>Over 5M</option><option>1–5M</option><option>Under 1M</option></select></td><td style="padding: 6px 12px 8px"></td></tr></thead>
+            <tbody><tr style="border-top: 1px solid #2B2F36;"><td style="padding: 12px 12px 12px 18px"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 50%; background: #ECEEF1; color: #111317; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0">PN</span><span style="font-weight: 600">Priya N.</span></span></td><td style="padding: 12px">38</td><td style="padding: 12px">58</td><td style="padding: 12px">64</td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6EE7A0; font-weight: 500">75%</span></td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace">9.8M</span></td><td style="padding: 12px"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 70px; height: 6px; border-radius: 999px; background: #24272D; overflow: hidden; display: inline-block"><span style="display: block; width: 60%; height: 100%; background: #C8102E"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px">15%</span></span></td></tr><tr style="border-top: 1px solid #2B2F36;"><td style="padding: 12px 12px 12px 18px"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 50%; background: #6B7280; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0">MK</span><span style="font-weight: 600">Meera K.</span></span></td><td style="padding: 12px">42</td><td style="padding: 12px">0</td><td style="padding: 12px">31</td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6EE7A0; font-weight: 500">87%</span></td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace">4.1M</span></td><td style="padding: 12px"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 70px; height: 6px; border-radius: 999px; background: #24272D; overflow: hidden; display: inline-block"><span style="display: block; width: 24%; height: 100%; background: #C8102E"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px">6%</span></span></td></tr><tr style="border-top: 1px solid #2B2F36;"><td style="padding: 12px 12px 12px 18px"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 50%; background: #9AA1AC; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0">AS</span><span style="font-weight: 600">Arjun S.</span></span></td><td style="padding: 12px">4</td><td style="padding: 12px">34</td><td style="padding: 12px">22</td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #FBBF24; font-weight: 500">55%</span></td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace">6.2M</span></td><td style="padding: 12px"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 70px; height: 6px; border-radius: 999px; background: #24272D; overflow: hidden; display: inline-block"><span style="display: block; width: 36%; height: 100%; background: #C8102E"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px">9%</span></span></td></tr><tr style="border-top: 1px solid #2B2F36;"><td style="padding: 12px 12px 12px 18px"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 50%; background: #ECEEF1; color: #111317; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0">DV</span><span style="font-weight: 600">Deepa V.</span></span></td><td style="padding: 12px">12</td><td style="padding: 12px">15</td><td style="padding: 12px">18</td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #FF8A98; font-weight: 500">44%</span></td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace">5.7M</span></td><td style="padding: 12px"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 70px; height: 6px; border-radius: 999px; background: #24272D; overflow: hidden; display: inline-block"><span style="display: block; width: 36%; height: 100%; background: #C8102E"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px">9%</span></span></td></tr><tr style="border-top: 1px solid #2B2F36;"><td style="padding: 12px 12px 12px 18px"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 50%; background: #C8102E; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0">RI</span><span style="font-weight: 600">Rohan I.</span></span></td><td style="padding: 12px">12</td><td style="padding: 12px">0</td><td style="padding: 12px">9</td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6EE7A0; font-weight: 500">78%</span></td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace">1.3M</span></td><td style="padding: 12px"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 70px; height: 6px; border-radius: 999px; background: #24272D; overflow: hidden; display: inline-block"><span style="display: block; width: 8%; height: 100%; background: #C8102E"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px">2%</span></span></td></tr><tr style="border-top: 1px solid #2B2F36;"><td style="padding: 12px 12px 12px 18px"><span style="display: flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 50%; background: #6B7280; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0">SK</span><span style="font-weight: 600">Sahil K.</span></span></td><td style="padding: 12px">8</td><td style="padding: 12px">11</td><td style="padding: 12px">14</td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6EE7A0; font-weight: 500">71%</span></td><td style="padding: 12px"><span style="font-family: 'IBM Plex Mono', monospace">2.4M</span></td><td style="padding: 12px"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 70px; height: 6px; border-radius: 999px; background: #24272D; overflow: hidden; display: inline-block"><span style="display: block; width: 16%; height: 100%; background: #C8102E"></span></span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px">4%</span></span></td></tr></tbody>
+          </table>
+        </div>
+        <div style="padding: 10px 18px; border-top: 1px solid #2B2F36; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 13px; color: #9AA1AC">
+          <span>Showing <span style="color: #ECEEF1; font-weight: 500">1–6</span> of 18 people</span>
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap">
+            <label style="display: flex; align-items: center; gap: 8px">Rows per page <select style="font-family: inherit; width: 100%; box-sizing: border-box; min-height: 32px; padding: 0 8px; border: 1px solid #3A3F48; border-radius: 6px; background: #17191D; color: #ECEEF1; font-size: 12px; width: auto"><option selected>6</option><option>25</option><option>50</option></select></label>
+            <nav aria-label="Pagination for people" style="display: flex; align-items: center; gap: 4px"><button type="button" aria-label="Previous page" disabled style="font-family: inherit; min-width: 32px; height: 32px; padding: 0 8px; border-radius: 6px; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #2B2F36; background: #0F1012; color: #6B7280"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button><button type="button" aria-current="page" style="font-family: inherit; min-width: 32px; height: 32px; padding: 0 8px; border-radius: 6px; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; border: 0; background: #ECEEF1; color: #111317">1</button><button type="button" aria-label="Page 2" style="font-family: inherit; min-width: 32px; height: 32px; padding: 0 8px; border-radius: 6px; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #2B2F36; background: #17191D; color: #ECEEF1">2</button><button type="button" aria-label="Page 3" style="font-family: inherit; min-width: 32px; height: 32px; padding: 0 8px; border-radius: 6px; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #2B2F36; background: #17191D; color: #ECEEF1">3</button><button type="button" aria-label="Next page" style="font-family: inherit; min-width: 32px; height: 32px; padding: 0 8px; border-radius: 6px; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #2B2F36; background: #17191D; color: #ECEEF1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></nav>
+          </div>
+        </div>
+        </section></div>
+      <div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px"><section aria-labelledby="lic-heading" style="background: #17191D; border: 1px solid #2B2F36; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap">
+            <h2 id="lic-heading" style="margin: 0; font-size: 14px; font-weight: 600">Team license</h2>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 28px; font-weight: 600; letter-spacing: -0.02em">62%</span><span style="font-size: 12px; color: #9AA1AC">41.2M of 66.5M tokens</span></div>
+          <div style="height: 10px; border-radius: 999px; background: #24272D; overflow: hidden"><div style="width: 62%; height: 100%; background: #C8102E"></div></div>
+          <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #B9BFC8; font-size: 12px; color: #9AA1AC">At the current pace the license reaches about 85% by month end.</p>
+        </section>
+        <section aria-labelledby="wf-heading" style="background: #17191D; border: 1px solid #2B2F36; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap">
+            <h2 id="wf-heading" style="margin: 0; font-size: 14px; font-weight: 600">Tachyon by workflow</h2>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <div style="display: flex; flex-direction: column; gap: 4px">
+            <span style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px"><span>Regression writing</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9AA1AC">19.8M · 48%</span></span>
+            <span style="height: 8px; border-radius: 999px; background: #24272D; overflow: hidden; display: block"><span style="display: block; width: 48%; height: 100%; background: #C8102E"></span></span>
+          </div><div style="display: flex; flex-direction: column; gap: 4px">
+            <span style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px"><span>Acceptance writing</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9AA1AC">12.8M · 31%</span></span>
+            <span style="height: 8px; border-radius: 999px; background: #24272D; overflow: hidden; display: block"><span style="display: block; width: 31%; height: 100%; background: #C8102E"></span></span>
+          </div><div style="display: flex; flex-direction: column; gap: 4px">
+            <span style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px"><span>Embeddings</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9AA1AC">5.8M · 14%</span></span>
+            <span style="height: 8px; border-radius: 999px; background: #24272D; overflow: hidden; display: block"><span style="display: block; width: 14%; height: 100%; background: #C8102E"></span></span>
+          </div><div style="display: flex; flex-direction: column; gap: 4px">
+            <span style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px"><span>Journey labelling</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9AA1AC">2.8M · 7%</span></span>
+            <span style="height: 8px; border-radius: 999px; background: #24272D; overflow: hidden; display: block"><span style="display: block; width: 7%; height: 100%; background: #C8102E"></span></span>
+          </div>
+          </div>
+        </section></div>
+    </div>
+  </div>
+</main>
+
+</div>
+
+
+</body>
+</html>

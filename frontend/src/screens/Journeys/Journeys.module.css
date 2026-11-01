@@ -1,0 +1,28 @@
+.findings { display: flex; gap: 14px; flex-wrap: wrap; }
+.finding {
+  flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 8px;
+  padding: 16px 18px; border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: var(--bg-surface); color: var(--text);
+}
+.findingHead { display: flex; align-items: baseline; gap: 10px; }
+.big { font-size: 30px; font-weight: 600; line-height: 1; }
+.bigAccent { color: var(--danger-text); }
+.findingTitle { font-size: 15px; font-weight: 600; }
+.body { font-size: 13px; line-height: 1.5; color: var(--text-secondary); }
+.findingLink { font-size: 13px; font-weight: 500; margin-top: auto; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.reasons { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
+.cite {
+  border-left: 3px solid var(--border-strong); padding: 6px 10px; font-size: 12px;
+  color: var(--text-secondary); background: var(--bg-subtle); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.observed {
+  display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; flex-wrap: wrap;
+  border: 1px solid var(--warning); background: var(--warning-tint); border-radius: var(--radius-md);
+}
+.observedLabel {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--warning-text); white-space: nowrap;
+}
+.scope { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--text-muted); }
+.tableWrap { min-width: 0; display: flex; flex-direction: column; }
+.tableWrap th { position: relative; }

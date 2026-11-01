@@ -1,0 +1,17 @@
+# .matrix/skills.yaml, placed in each automation repo.
+# Precedence: run override > this file > auto-detect.
+# @live follows promotions; a pinned version (@v1) stays fixed until changed here.
+app: payments-hub
+
+regression:
+  skills:
+    - selenium-java-pageobject@live
+    - hyperexecute-yaml@live
+    - payments-hub-conventions@v1
+  paths:
+    "src/test/java/api/**": karate-api@v2
+
+acceptance:
+  skills:
+    - octane-case-format@live
+    - payments-hub-conventions@v1

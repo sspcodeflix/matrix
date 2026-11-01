@@ -1,0 +1,66 @@
+.filters { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+.filters :global(.select) { min-width: 220px; }
+
+.charts { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); }
+.chartCard { padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0; padding: 0; list-style: none; font-size: 12px; color: var(--text-secondary); }
+.legend li { display: inline-flex; align-items: center; gap: 6px; }
+.swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.tierCounts { font-size: 13px; }
+.tierCount { color: var(--text); font-weight: 600; }
+.swatchLine { width: 16px; height: 2px; display: inline-block; border-radius: 1px; }
+
+/* Tiers. Text never wears these; they colour marks only. */
+.tPass { background: var(--success); }
+.tCases { background: var(--warning); }
+.tAwait { background: var(--text-muted); }
+.tGap { background: var(--accent); }
+
+.bars { position: relative; display: flex; flex-direction: column; gap: 10px; }
+.barRow {
+  display: grid; grid-template-columns: minmax(120px, 200px) minmax(0, 1fr) 112px; gap: 12px; align-items: center;
+}
+.barLabel { display: flex; flex-direction: column; gap: 1px; min-width: 0; font-size: 13px; font-weight: 500; }
+.barLabelBtn {
+  border: 0; background: none; padding: 0; text-align: left; cursor: pointer; color: var(--text);
+  min-height: 44px; display: flex; align-items: center; border-radius: var(--radius-sm);
+}
+.barLabelBtn:hover .barLabel > span:first-child { color: var(--accent-text); text-decoration: underline; }
+/* 2px surface gaps separate segments; only the data end is rounded. */
+.track { display: flex; gap: 2px; height: 20px; background: var(--bg-surface); min-width: 0; }
+.seg { display: block; min-width: 3px; height: 100%; }
+.seg:last-child { border-radius: 0 4px 4px 0; }
+.seg:hover { filter: brightness(1.12); }
+.unmeasured {
+  border-radius: 0 4px 4px 0;
+  background: repeating-linear-gradient(45deg, var(--border) 0 2px, transparent 2px 7px);
+  border: 1px solid var(--border);
+}
+.barValue { font-size: 13px; white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .barRow { grid-template-columns: minmax(0, 1fr) auto; }
+  .barRow > .track { grid-column: 1 / -1; grid-row: 2; }
+}
+
+.trend { position: relative; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.trend svg { display: block; overflow: visible; }
+.grid { stroke: var(--border); stroke-width: 1; }
+.axis { fill: var(--text-muted); font-size: 11px; font-family: var(--font-mono); }
+.endLabel { fill: var(--text-secondary); font-size: 12px; font-weight: 500; }
+.line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.lineCovered { stroke: var(--success); background: var(--success); fill: var(--success); }
+.lineMatrix { stroke: var(--text); background: var(--text); fill: var(--text); }
+.line.lineCovered, .line.lineMatrix { fill: none; }
+.dot { stroke: var(--bg-surface); stroke-width: 2; }
+.crosshair { stroke: var(--border-strong); stroke-width: 1; }
+
+.tooltip {
+  position: absolute; z-index: 5; pointer-events: none; max-width: 240px;
+  background: var(--inverse-bg); color: var(--inverse-text); font-size: 12px; line-height: 1.4;
+  padding: 6px 8px; border-radius: var(--radius-sm);
+}
+
+.notMeasured { color: var(--text-muted); }
+.stale { color: var(--warning-text); }

@@ -1,0 +1,10 @@
+.cards { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); align-items: start; }
+.solid {
+  display: inline-flex; align-items: center; border-radius: var(--radius-pill); padding: 2px 10px;
+  background: var(--accent); color: var(--on-accent); font-size: 12px; font-weight: 500; white-space: nowrap;
+}
+.reservations { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
+.reservations li { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.detail { display: grid; grid-template-columns: max-content 1fr; gap: 8px 16px; margin: 0; font-size: 13px; }
+.detail dt { color: var(--text-muted); }
+.detail dd { margin: 0; }

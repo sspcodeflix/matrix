@@ -1,0 +1,37 @@
+.pickers {
+  padding: 14px 18px; display: flex; gap: 14px; align-items: flex-end; flex-wrap: wrap;
+}
+.picker { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 500; flex: 1 1 240px; min-width: 0; }
+.picker .select { font-size: 13px; }
+.back { font-size: 13px; font-weight: 500; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin: -12px 0 -8px; }
+
+.kpi { flex: 1 1 200px; min-width: 0; padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.kpiValue { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
+
+.chartCard { padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--text-secondary); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.chartWrap { overflow-x: auto; position: relative; }
+.trendSvg { display: block; width: 100%; min-width: 640px; height: auto; }
+.svgValue { font-family: var(--font-mono); font-size: 13px; font-weight: 600; fill: var(--text); }
+.svgAxis { font-family: var(--font-mono); font-size: 12px; fill: var(--text-muted); }
+.hoverLine { font-size: 12px; color: var(--text-secondary); min-height: 18px; }
+
+.sideCard { padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.sideCard h2 { font-size: 14px; }
+.bridge { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.bridgeRow { display: flex; flex-direction: column; gap: 4px; }
+.bridgeLabel { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
+.bridgeSvg { display: block; width: 100%; height: 14px; }
+
+.lostList { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.lostList li { display: flex; flex-direction: column; gap: 3px; }
+.rules { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.5; color: var(--text-secondary); display: flex; flex-direction: column; gap: 8px; }
+
+.up { color: var(--success-text); font-weight: 600; }
+.down { color: var(--danger-text); font-weight: 600; }
+.lostCount { color: var(--accent-text); font-weight: 600; }
+
+/* DataTable's visually hidden sort labels can widen the page on phones; clip them here. */
+.tableWrap { position: relative; overflow-x: clip; overflow-clip-margin: 4px; }

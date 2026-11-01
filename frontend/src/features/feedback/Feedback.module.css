@@ -1,0 +1,24 @@
+.card {
+  display: flex; flex-direction: column; gap: 12px; padding: 14px 16px;
+  border: 1px dashed var(--border-strong); border-radius: var(--radius-lg); background: var(--bg-subtle);
+}
+.card.done { border-style: solid; border-color: var(--border); gap: 6px; }
+.summary { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.stars { display: inline-flex; align-items: center; gap: 2px; border: 0; padding: 0; margin: 0; flex-wrap: wrap; }
+.star {
+  width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-md); cursor: pointer; color: var(--text-muted);
+}
+.star:hover { background: var(--bg-chip); }
+.star:focus-within { outline: 2px solid var(--accent); outline-offset: 1px; }
+/* Stars use the warning token: a rating is not a pass/fail or a gap. */
+.star[data-on] svg, .starStatic[data-on] svg { fill: var(--warning); stroke: var(--warning); }
+.starStatic { display: inline-flex; color: var(--text-muted); }
+.commentRow { display: flex; gap: 8px; flex-wrap: wrap; }
+.commentRow :global(.input) { flex: 1 1 260px; }
+.req { color: var(--danger-text); font-weight: 500; }
+.error { color: var(--danger-text); font-size: 13px; }
+.suggestion {
+  display: flex; flex-direction: column; gap: 8px; padding: 12px; border-radius: var(--radius-md);
+  background: var(--bg-surface); border: 1px solid var(--border);
+}

@@ -1,0 +1,290 @@
+ILLUSTRATIVE SAMPLE / FICTIONAL DATA AND EVIDENCE
+
+
+
+
+ ILLUSTRATIVE / COVERAGE REPORT
+
+
+
+
+ Coverage that
+ can be traced.
+ Harbor Service Desk
+ A fictional service-request application. This report demonstrates report layout and evidence traceability; it is
+ not a bank report.
+
+
+
+
+ 37.5%                                          6/8                                             5
+ Verified passing                               With a test case                                Open coverage gaps
+ 3 of 8 requirements                            Case presence only                              Evidence or action needed
+
+
+
+
+ 01 / What this snapshot proves
+ Three requirements have mapped automation that passed in the pinned run. Two have no mapped test, one
+ has stale or failing evidence, and two await qualifying execution evidence.
+
+
+   Requirement state                                                                        Count                 Share
+
+
+   Verified passing                                                                         3                     37.5%
+
+
+   Awaiting execution evidence                                                              2                     25%
+
+
+   No test                                                                                  2                     25%
+
+
+   Stale or failing                                                                         1                     12.5%
+
+
+
+ Case presence is not verified coverage. A blocked test is not a failure, and an unexecuted case is not a
+ pass.
+
+ Scope: All 8 permitted UI/API requirements in the fictional application; no filters; 0 excluded.
+ Captured: 30 Oct 2026, 09:00 UTC+04:00
+ Generated: 30 Oct 2026, 09:05 UTC+04:00 (fixed sample timestamp)
+ Snapshot: DEMO-SNAPSHOT-014 · Scan: DEMO-SCAN-014
+ Run: DEMO-RUN-032 · DEMO-SIT
+
+ All source documents, identifiers and run outcomes are synthetic. No test execution was performed to produce this sample.
+
+
+
+
+DEMO-RPT-014 | DEMO-SNAPSHOT-014                                                                                             Page 1
+ILLUSTRATIVE SAMPLE / FICTIONAL DATA AND EVIDENCE
+
+
+
+
+ 02 / Requirement traceability
+ All eight requirements are shown. The coverage denominator is the complete permitted requirement set;
+ there are no excluded rows.
+
+
+   Requirement /                Full requirement                                                  Status / case
+   module
+
+
+   FR-SD-101                    Prevent a requester from approving their own service              Verified passing
+   Approval                     request, including when the approval action is reached            TC-SD-101
+                                through a bookmarked URL
+
+
+   FR-SD-102                    Preserve the pending confirmation state when a submission         Verified passing
+   Submission                   response times out                                                TC-SD-102
+
+
+   FR-SD-103                    Record an approved request's actor, decision time and             Verified passing
+   Audit                        immutable request revision                                        TC-SD-103
+
+
+   FR-SD-104                    Allow auditors to inspect a request without exposing editing      No test
+   Access                       or approval controls                                              No mapped case
+
+
+   FR-SD-105                    Move a request scheduled on a non-working day to the next         No test
+   Scheduling                   configured working day                                            No mapped case
+
+
+   FR-SD-106                    Return the original request for a repeated submission             Stale or failing
+   Submission                   carrying the same idempotency key                                 TC-SD-106
+
+
+   FR-SD-107                    Require a non-empty explanation before a reviewer can reject      Awaiting execution evidence
+   Approval                     a request                                                         TC-SD-107
+
+
+   FR-SD-108                    Preserve the attachment filename when an authorized               Awaiting execution evidence
+   Documents                    reviewer downloads request evidence                               TC-SD-108
+
+
+
+
+ Pinned run evidence
+ 3 passed · 1 failed · 1 blocked. One additional reviewed case was not run because its automation is draft. The
+ failed locator test does not establish a product defect.
+
+ Illustrative commit: a4e6c71d88f34b2196fc52d703a9b15e6240dd12
+ Read the frozen run excerpt on page 5. Sources and requirement clauses are included in the Excel companion.
+
+
+
+
+DEMO-RPT-014 | DEMO-SNAPSHOT-014                                                                                           Page 2
+ILLUSTRATIVE SAMPLE / FICTIONAL DATA AND EVIDENCE
+
+
+
+
+ 03 / Decisions and recovery
+ Five requirements do not yet have passing evidence. These are distinct states with different next actions.
+
+ FR-SD-104 · No test
+ Allow auditors to inspect a request without exposing editing or approval controls
+
+ No reviewed manual case or automation is mapped to this requirement.
+
+ Next: Write and review an access test.
+ Owner: QA team (fictional) · Source: SRC-REQ §4.4
+
+
+
+ FR-SD-105 · No test
+ Move a request scheduled on a non-working day to the next configured working day
+
+ Calendar behaviour is documented, but no test case is mapped.
+
+ Next: Create a case using the versioned calendar fixture.
+ Owner: Scheduling QA (fictional) · Source: SRC-CAL §3.2
+
+
+
+ FR-SD-106 · Stale or failing
+ Return the original request for a repeated submission carrying the same idempotency key
+
+ Mapped automation failed after the confirmation locator changed; product behaviour is not established by this
+ result.
+
+ Next: Review locator fix proposal before a future Git-triggered run.
+ Owner: Automation team (fictional) · Source: SRC-API §2.4
+
+
+
+ FR-SD-107 · Awaiting execution evidence
+ Require a non-empty explanation before a reviewer can reject a request
+
+ The test was blocked because its reviewer identity was unavailable.
+
+ Next: Restore the test identity; observe the next eligible pipeline run.
+ Owner: Environment support (fictional) · Source: SRC-REQ §4.7
+
+
+
+ FR-SD-108 · Awaiting execution evidence
+ Preserve the attachment filename when an authorized reviewer downloads request evidence
+
+ A reviewed case exists; automation remains in draft and has no qualifying run.
+
+ Next: Review the automation proposal and its evidence.
+ Owner: Automation team (fictional) · Source: SRC-REQ §4.8
+
+
+
+
+DEMO-RPT-014 | DEMO-SNAPSHOT-014                                                                              Page 3
+ILLUSTRATIVE SAMPLE / FICTIONAL DATA AND EVIDENCE
+
+
+
+
+ 04 / A complete case, not a title
+ The workbook contains all six cases and nineteen ordered steps. This page illustrates a long title,
+ preconditions, assertion-level expectations and a source reference.
+
+ TC-SD-101 / r3 · FR-SD-101
+
+ A requester cannot approve their own request from either the request page or a
+ direct approval URL
+ Review: Accepted · Execution: Passed in DEMO-RUN-032
+
+ Preconditions: A fictional pending request belongs to the current requester. The approval URL is supplied by
+ a fixture, never guessed.
+
+ Role: requester · Data need: request.pending.owned-by-current-user
+
+
+   Step         Action                                                        Expected result
+
+
+   1            Sign in as the requester test role and open the owned         The request details are visible and the Approve control
+                pending request.                                              is absent.
+
+
+   2            Open the fixture-provided approval URL for the same           Access is denied; the request remains pending.
+                request.
+
+
+   3            Read the request state through the approved test              No approval decision or approver has been recorded.
+                fixture.
+
+
+   4            Open the audit entry for the denied attempt as an             The attempt is recorded as denied without any
+                authorized auditor.                                           approval event.
+
+
+
+
+ Source: SRC-REQ §4.1 · Tags: FR-SD-101, matrix
+
+ Reusable workbook structure
+ Summary preserves scope, counts and versions. Test cases contains case identity, readiness and
+ provenance. Steps preserves every ordered action and expected result. Sources embeds the frozen excerpts
+ and can be reached through internal workbook links.
+
+ This general workbook is not an Octane import template. Downloading it does not sign off a story, approve a PR or initiate execution.
+
+
+
+
+DEMO-RPT-014 | DEMO-SNAPSHOT-014                                                                                                  Page 4
+ILLUSTRATIVE SAMPLE / FICTIONAL DATA AND EVIDENCE
+
+
+
+
+ 05 / Sources and provenance
+ Source excerpts are embedded so the evidence remains readable offline. Every source below was authored
+ solely for this sample.
+
+ SRC-REQ · Harbor service request rules
+ Version 2.4 · Synthetic requirements authored for this design sample
+
+ 4.1 Requesters must not approve their own requests, including via direct routes. Denied attempts create an
+ audit event. 4.3 Every approval stores the actor, timestamp and exact request revision. 4.4 Auditors can
+ inspect but cannot edit or approve. 4.7 Rejection requires a non-empty explanation and must retain the form
+ on validation failure. 4.8 Authorized attachment downloads preserve the original filename and content.
+
+
+ SRC-API · Submission and confirmation contract
+ Version 1.7 · Synthetic API contract authored for this design sample
+
+ 2.3 A timeout after server acceptance leaves confirmation pending until a status lookup resolves it; the UI
+ must not claim success or failure prematurely. 2.4 Repeating a payload with its accepted idempotency key
+ returns the original request identifier and creates no duplicate.
+
+
+ SRC-CAL · Working-day scheduling policy
+ Version 1.1 · Synthetic operations policy authored for this design sample
+
+ 3.2 Requests scheduled on a non-working day move to the next working day in the configured, versioned
+ calendar. The chosen date is shown before confirmation.
+
+
+ SRC-RUN · Frozen illustrative run evidence
+ Version DEMO-RUN-032 / artifact-r1 · Synthetic evidence, not an executed Harness or HyperExecute run
+
+ Environment DEMO-SIT; illustrative commit a4e6c71d88f34b2196fc52d703a9b15e6240dd12. TC-SD-101, 102
+ and 103 passed. TC-SD-106 failed at the confirmation locator. TC-SD-107 was blocked before execution by an
+ unavailable test identity. TC-SD-108 was not included: its automation is draft. Summary: 3 passed, 1 failed, 1
+ blocked, 1 not run. Matrix did not trigger execution.
+
+
+ Report identity
+ DEMO-RPT-014 · DEMO-PACK-014
+ DEMO-SNAPSHOT-014 · sample-template/1.0 · sample-coverage/1.0
+ The PDF, HTML and coverage workbook use one frozen JSON fixture. The manifest records SHA-256 hashes for each file.
+
+
+
+
+DEMO-RPT-014 | DEMO-SNAPSHOT-014                                                                                       Page 5
+

@@ -1,0 +1,33 @@
+.chartWrap { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.svg { width: 100%; height: auto; display: block; overflow: visible; }
+.axisLabel { font-family: var(--font-mono); font-size: 11px; fill: var(--text-muted); }
+.valueLabel { font-family: var(--font-mono); font-size: 11px; fill: var(--text-secondary); }
+.readout { min-height: 20px; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--text-secondary); }
+.legend > span { display: inline-flex; align-items: center; gap: 6px; }
+.swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; flex-shrink: 0; }
+
+.testsRow { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; }
+.series { flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.weekly { flex: 2 1 380px; min-width: 0; }
+.big { font-size: 30px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
+.big small { font-size: 14px; font-weight: 500; color: var(--text-muted); }
+
+.split { display: flex; gap: 2px; height: 8px; border-radius: 999px; overflow: hidden; }
+.split > span { display: block; height: 100%; }
+
+.track { display: block; height: 8px; border-radius: 999px; background: var(--bg-chip); overflow: hidden; }
+.track > span { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
+
+.wfList { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.wfList li { display: flex; flex-direction: column; gap: 4px; }
+
+.avatar {
+  width: 28px; height: 28px; border-radius: 50%; color: var(--inverse-text); flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600;
+}
+.meter { width: 70px; height: 6px; border-radius: 999px; background: var(--bg-chip); overflow: hidden; display: inline-block; flex-shrink: 0; }
+.meter > span { display: block; height: 100%; background: var(--accent); }
+
+.layout { display: grid; gap: 20px; align-items: start; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1280px) { .layout { grid-template-columns: minmax(0, 1fr) 340px; } }

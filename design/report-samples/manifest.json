@@ -1,0 +1,40 @@
+{
+  "classification": "ILLUSTRATIVE SAMPLE | Fictional records and evidence. Not a production report.",
+  "snapshot_id": "DEMO-SNAPSHOT-014",
+  "bundle_id": "DEMO-PACK-014",
+  "source_fixture": "fixture.json",
+  "fixture_sha256": "447a169de54c2f6e5a81bae8eb934bf0f924517612014f41c4bdae8ab35f5ee3",
+  "counts": {
+    "requirements": 8,
+    "verified_passing": 3,
+    "case_presence": 6,
+    "open_gaps": 5,
+    "awaiting_execution_evidence": 2,
+    "no_test": 2,
+    "stale_or_failing": 1,
+    "cases": 6,
+    "steps": 19
+  },
+  "artifacts": [
+    {
+      "file": "matrix_harbor-service-desk_coverage_DEMO-SCAN-014_20261030T050000Z_DEMO-RPT-014.pdf",
+      "bytes": 54905,
+      "sha256": "03882f5117826d19c696717f8ea201a1a411ccabe55b98412f199829a7c6c623"
+    },
+    {
+      "file": "matrix_harbor-service-desk_coverage_DEMO-SCAN-014_20261030T050000Z_DEMO-RPT-014.html",
+      "bytes": 19577,
+      "sha256": "7d88c205520adfb3ca4a8a07b32126075dcb500f56b98104e227438ee8e656c8"
+    },
+    {
+      "file": "matrix_harbor-service-desk_coverage_DEMO-SCAN-014_20261030T050000Z_DEMO-RPT-014.xlsx",
+      "bytes": 10825,
+      "sha256": "eb03f3edceace397af6bb633a97a1c81c16804629f5eab57c1d24e639f6d8f2a"
+    },
+    {
+      "file": "matrix_harbor-service-desk_test-cases_DEMO-SCAN-014_20261030T050000Z_DEMO-RPT-015.xlsx",
+      "bytes": 11167,
+      "sha256": "0e247ce518e91ec8f5cd1983ec2f4108b3d27e9d9afc59fc8b1173ef254ee9da"
+    }
+  ]
+}
