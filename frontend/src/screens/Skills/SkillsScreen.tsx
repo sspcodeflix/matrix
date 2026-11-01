@@ -1,4 +1,3 @@
-// Reference: design/html/Skills.html
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import { useApi } from '../../api/useApi';
 import { DataTable, type Column, type TableView } from '../../components/DataTable';

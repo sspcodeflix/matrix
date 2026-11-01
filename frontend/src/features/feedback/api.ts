@@ -92,9 +92,6 @@ export function outputRevisionFor(generationId: string, outputHash: string): num
   return (revisions.get(generationId) ?? []).indexOf(outputHash) + 1;
 }
 
-// TODO(backend): GET /api/generations/{id}/feedback?mine=1
-export const fetchFeedback = (generationId: string) => mock(getFeedbackHistory(generationId), 60);
-
 /**
  * TODO(backend): PUT /api/generations/{id}/feedback. The server stores it in
  * `generation_feedback` and logs it to the generation's MLflow trace as human feedback

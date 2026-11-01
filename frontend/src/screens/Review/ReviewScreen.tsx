@@ -1,4 +1,3 @@
-// Reference: design/html/Review.html
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useApi } from '../../api/useApi';
@@ -32,7 +31,7 @@ export default function ReviewScreen() {
   const [page, setPage] = useState(1);
   const [approvals, setApprovals] = useState<Record<string, ApprovalStatus>>({});
   const target = useWorkTarget();
-  // Acceptance items show their story's shared test-case set (UI_UX_REVIEW R2).
+  // Acceptance items show their story's shared test-case set.
   useTestCaseStore();
   // Latest items, read when an approval response arrives (it may arrive after newer decisions).
   const itemsRef = useRef(items);
@@ -111,7 +110,7 @@ export default function ReviewScreen() {
     }
   };
 
-  // Cross-screen target (UI_UX_REVIEW C3): `item` is the review item ID; `ref` the story or requirement ID.
+  // Cross-screen target: `item` is the review item ID; `ref` the story or requirement ID.
   const itemParam = params.get('item');
   const refParam = target.ref?.trim() || null;
   const refMatches = (i: ReviewItem, ref: string) =>

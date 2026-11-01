@@ -22,7 +22,7 @@ export interface ExportJob {
   snapshotId: string;
   /**
    * When the source evidence was captured (absolute, UTC), from the request's
-   * `snapshotCapturedAt` (UI_UX_REVIEW C6). Null when the invoking screen did not supply it:
+   * `snapshotCapturedAt`. Null when the invoking screen did not supply it:
    * shown as "capture time unknown", never replaced with the current time.
    */
   capturedAt: string | null;

@@ -1,4 +1,3 @@
-// Reference: design/html/Huddle.html
 import { useMemo, useState, type CSSProperties, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useApi } from '../../api/useApi';
@@ -20,7 +19,7 @@ const STATUS_TONE = { pending: 'accent', accepted: 'success', rejected: 'neutral
 const nowLabel = () => new Date().toTimeString().slice(0, 5);
 
 /**
- * Resolves a cross-screen target (UI_UX_REVIEW C3): `item` is a decision ID; `ref` a story or
+ * Resolves a cross-screen target: `item` is a decision ID; `ref` a story or
  * requirement ID, preferring a pending decision (e.g. a sign-off awaiting UAT) over settled ones.
  * Returns `missing` instead of falling back to an unrelated decision.
  */

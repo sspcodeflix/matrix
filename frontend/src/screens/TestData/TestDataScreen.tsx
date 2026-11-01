@@ -1,4 +1,3 @@
-// Reference: design/html/TestData.html
 import { useMemo, useState, type CSSProperties } from 'react';
 import { useApi } from '../../api/useApi';
 import { DataTable, type Column } from '../../components/DataTable';

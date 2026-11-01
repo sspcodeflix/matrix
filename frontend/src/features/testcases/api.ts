@@ -4,11 +4,11 @@ import { isCurrentComplete, outputRevisionFor, record as recordFeedback, type Ge
 
 /*
  * One versioned test-case set per story (docs/DATA_MODEL.md `test_cases`), shared by the story
- * workspace and the Review queue so both show the same IDs, content and decisions (UI_UX_REVIEW R2).
+ * workspace and the Review queue so both show the same IDs, content and decisions.
  *
  * Per-test Accept and Reject are provisional. A set is released to UAT sign-off and automation only
- * by an explicit set acceptance at the current output revision, after that revision is rated
- * (UI_UX_REVIEW R1). Rejected cases are excluded from the release, and the count is stated.
+ * by an explicit set acceptance at the current output revision, after that revision is rated.
+ * Rejected cases are excluded from the release, and the count is stated.
  *
  * Mock-backed: everything here is sample data held in memory. Names and numbers are placeholders.
  */

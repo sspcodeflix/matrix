@@ -1,4 +1,3 @@
-// Reference: design/html/NewScan.html
 import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import type { Application } from '../../api/session';

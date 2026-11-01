@@ -16,7 +16,7 @@ import styles from './Review.module.css';
 
 type Section = 'tests' | 'changes' | 'dryrun';
 
-/** Who acts next on this item, in words (UI_UX_REVIEW "Ownership"). */
+/** Who acts next on this item, in words. */
 function nextActor(item: ReviewItem, approval: ApprovalStatus | undefined, canPostApproval: boolean, release?: SetRelease): { owner: string; detail: string } {
   if (release) {
     // Per-test decisions are provisional: only the set acceptance at the rated revision releases work.
@@ -155,7 +155,7 @@ export function ReviewDetail({ item, caseSet, user, canPostApproval, snapshot, a
   const acceptCount = pendingApproval ? toAccept(pendingApproval) : release ? release.toAccept : pending.length;
   const excludedNote = release ? exclusionNote(release) : '';
 
-  // Record identity for exports (UI_UX_REVIEW C2, C6): the item's tests at the reviewed revision.
+  // Record identity for exports: the item's tests at the reviewed revision.
   const snapshotId = `${item._id.toUpperCase()}${item.pr ? `-${item.pr.headCommit}` : ''}`;
   const testScope = {
     count: tests.length,

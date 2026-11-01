@@ -141,7 +141,7 @@ export interface ExportInput {
 type IdentityFields = Pick<ExportInput, 'context' | 'application' | 'reportKey' | 'format' | 'scopeKey' | 'snapshotId' | 'capturedAt' | 'requester' | 'ids' | 'spec'>;
 
 /**
- * Export identity (UI_UX_REVIEW C2): application, invoking context, report, format, scope kind,
+ * Export identity: application, invoking context, report, format, scope kind,
  * snapshot (ID and capture time), the record identity of the scope and the requester. The record count is not part of
  * it. Returns null when a subset scope has no record identity: such requests are never
  * deduplicated, because equal counts cannot prove equal records.

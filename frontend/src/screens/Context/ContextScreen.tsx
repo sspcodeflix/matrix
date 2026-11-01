@@ -1,4 +1,3 @@
-// Reference: design/html/Context.html
 import { useCallback, useEffect, useMemo, useState, type CSSProperties, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useApi } from '../../api/useApi';

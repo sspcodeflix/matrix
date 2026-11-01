@@ -1,4 +1,3 @@
-// Reference: design/html/NewScanGit.html
 import { useId, useState } from 'react';
 import type { Application } from '../../api/session';
 import { useWorkspace } from '../../workspace/useWorkspace';

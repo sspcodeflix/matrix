@@ -1,4 +1,3 @@
-// Reference: design/html/Compare.html
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useApi } from '../../api/useApi';

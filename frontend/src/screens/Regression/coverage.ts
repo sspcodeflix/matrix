@@ -2,7 +2,7 @@ import type { CoverageCounts } from '../Overview/api';
 import type { RequirementRow } from './api';
 
 /*
- * One classification for Regression (UI_UX_REVIEW C7, R7). Table status, views, KPIs, bulk
+ * One classification for Regression. Table status, views, KPIs, bulk
  * eligibility and download summaries all derive from `stateOf` and `measures`, and `tierCounts`
  * gives the same four tiers as the Overview (docs/METRICS.md, "Coverage levels and CIO roll-up"):
  * - Automated and passing: case and script exist, not stale, and a mapped test passed in the

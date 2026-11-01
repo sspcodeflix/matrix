@@ -1,4 +1,3 @@
-// Reference: design/html/Settings.html
 import { useCallback, useEffect, useMemo, useState, type CSSProperties, type FormEvent } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useWorkspace } from '../../workspace/useWorkspace';

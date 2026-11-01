@@ -1,7 +1,7 @@
 import { useLocation, useSearchParams } from 'react-router-dom';
 
 /*
- * Cross-screen links that keep the work item's identity (UI_UX_REVIEW C3).
+ * Cross-screen links that keep the work item's identity.
  *
  * - `item`: exact record ID (review item, Huddle decision) when the caller knows it.
  * - `ref`: the originating story or requirement ID (e.g. PAY-1490, FR-0233). The target

@@ -1,6 +1,6 @@
 # Matrix frontend
 
-React 18 + TypeScript + Vite. Screens are ported from `../design/html/` and follow `../docs/SCREENS.md`.
+React 18 + TypeScript + Vite. Screens follow `../docs/SCREENS.md`.
 
 ```bash
 npm install

@@ -31,7 +31,7 @@ export interface ScopeCount {
   /** Optional hint under the scope option, e.g. "Every page, not just the 6 rows shown". */
   hint?: string;
   /**
-   * Identity of the records in this scope (UI_UX_REVIEW C2). For `selected`, the stable
+   * Identity of the records in this scope. For `selected`, the stable
    * record IDs; for `filtered`, a normalized filter spec (see `filterSpec`). Used for
    * de-duplication; the count stays display metadata.
    */
@@ -79,7 +79,7 @@ export interface DownloadRequest {
   applicationName?: string;
   /**
    * When the pinned source data was captured (ISO 8601), distinct from when the export is
-   * created (UI_UX_REVIEW C6). Shown as "data as of" for every format and retry.
+   * created. Shown as "data as of" for every format and retry.
    */
   snapshotCapturedAt?: string;
   /** Optional stable snapshot ID for the filename and de-duplication, e.g. "S-022". Derived from `snapshot` when omitted. */

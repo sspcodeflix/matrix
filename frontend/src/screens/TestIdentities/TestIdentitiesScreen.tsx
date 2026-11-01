@@ -1,4 +1,3 @@
-// Reference: design/html/TestIdentities.html
 import { useMemo, useState, type CSSProperties, type FormEvent } from 'react';
 import { useApi } from '../../api/useApi';
 import { DataTable, type Column } from '../../components/DataTable';

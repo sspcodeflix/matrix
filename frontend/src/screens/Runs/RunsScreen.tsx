@@ -1,4 +1,3 @@
-// Reference: design/html/Runs.html
 // Read-only monitoring. Matrix never starts or reruns execution: Harness runs tests from Git.
 import { useCallback, useMemo, useState, type CSSProperties } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
@@ -122,7 +121,7 @@ function Runs({ data }: { data: RunsData }) {
     [selectedId],
   );
 
-  // One collection snapshot for the whole export (UI_UX_REVIEW R5): every run captured on this
+  // One collection snapshot for the whole export: every run captured on this
   // screen, named by its run-ID range and dated by the newest included capture. Each scope lists
   // its own run IDs and derives the partial-result warning from all of its runs, not the viewed one.
   const openDownload = () => {

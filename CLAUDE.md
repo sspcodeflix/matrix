@@ -1,12 +1,12 @@
 # Matrix: instructions for Claude Code
 
-Matrix (**M**ulti-**A**gent **T**esting, **R**easoning, **I**ntelligence & e**X**ecution) is the GenAI testing product (SundayAI "Testing Agent") for an enterprise bank. It finds functional coverage gaps, writes test cases and automation, and reports execution results. This kit is the design hand-off: build the application from it.
+Matrix (**M**ulti-**A**gent **T**esting, **R**easoning, **I**ntelligence & e**X**ecution) is the GenAI testing product (SundayAI "Testing Agent") for an enterprise bank. It finds functional coverage gaps, writes test cases and automation, and reports execution results. This repository holds the specification and the React frontend; the backend is built next.
 
 Read these before writing code, in this order:
 1. `docs/PRODUCT.md`: what Matrix does, the workflows and personas
 2. `docs/ARCHITECTURE.md`: components, flows, the agent loop through Tachyon
 3. `docs/DATA_MODEL.md`: MongoDB collections
-4. `docs/SCREENS.md`: every screen, with the HTML reference in `design/html/` and screenshots in `design/screenshots/`
+4. `docs/SCREENS.md`: every screen; the React app in `frontend/` implements them
 5. `docs/INTEGRATIONS.md`, `docs/SECURITY.md`, `docs/METRICS.md`
 6. `docs/BACKLOG.md`: the build order. Follow it.
 7. `docs/OPEN_QUESTIONS.md`: do not guess these; leave a clear TODO and an interface.

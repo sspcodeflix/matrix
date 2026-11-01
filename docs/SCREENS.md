@@ -1,11 +1,11 @@
 # Screens
 
-The screen list contains **20 reference pairs**, including the shared Download report dialog and workflow-processing preview. Each has HTML in `design/html/<name>.html` (light) and `design/html/Dark-<name>.html` (dark), and screenshots in `design/screenshots/`. Open [the reference index](../design/html/index.html) to browse them. The HTML is a design reference, not production code: rebuild it as React components using `design/tokens.css`. DownloadReport and WorkflowProcessing include explicitly labelled local interaction demonstrations; they do not call a backend. The requirements below include states and behaviours not yet implemented.
+Every screen below is implemented in the React app under `frontend/src/screens/`, in light and dark themes. This document is the specification: where the app and this document differ, this document wins until it is updated.
 
 ## App shell (all app screens)
 - **Sidebar**: application switcher; show a separate release/sprint scope where the workflow needs it. Regression remains application-scoped. Sections:
   - **Workflows:** Acceptance, Regression, Journeys
-  - **Workspace:** Review queue, Runs, Huddle
+  - **Your work:** Review queue, Runs, Huddle
   - **Knowledge OS:** App context
   - **Admin:** Skills (lock icon, admin only), Prompt studio, User stats, Settings
 
@@ -30,8 +30,7 @@ The sidebar chooses the application (e.g. ABCD); the top right chooses one of it
 - Explain inline: **Stops this Matrix task. Completed results and existing PRs remain. Harness runs continue.** On acknowledgement, disable repeat submission and announce **Stop requested → Stopping → Stopped**. Do not report success merely because the request was sent; preserve the confirmed state on network failure.
 - Keep retained drafts, existing PR links and partial-result counts visible. While stopping, identify any in-flight operation still settling. Stop does not undo decisions or cancel Git-triggered execution. Incomplete/unprocessed scope must not look fully assessed or covered.
 - Offer **Continue from checkpoint** only for supported retained checkpoints, otherwise **Start a new attempt**. Both create an explicit new linked attempt after source/permission checks; never auto-resume. See [WORKFLOW_CONTROL.md](WORKFLOW_CONTROL.md) for fencing, race handling and authorization.
-- [WorkflowProcessing.html](../design/html/WorkflowProcessing.html) demonstrates Acceptance and Regression, stopping and retained results using sample data. The original workflow screens link to this preview without implying that their existing review-state fixture is running.
-- Both workflows have the same controls and states in light and dark themes. The preview theme link preserves the chosen workflow; back links return to the matching themed Acceptance or Regression reference. Running, Stopping and Stopped captures for each combination are in [screenshots/states](../design/screenshots/states/).
+- `frontend/src/screens/WorkflowProcessing/` demonstrates Acceptance and Regression processing, stopping and retained results using sample data, with the same controls and states in light and dark themes.
 
 ## Feedback on AI output (shared)
 Every AI output (story analysis, test cases, automation, tags, Regression automation in Review) carries a rating card: 5 stars, a one-line comment required below 4 stars, and **Refine with AI** that suggests clearer wording the user may accept or ignore. The output's move-on action is disabled until it is rated, with the reason and a link to the card beside it. See [FEEDBACK.md](FEEDBACK.md). The shared React component is `frontend/src/features/feedback/`.

@@ -14,7 +14,7 @@ import styles from './DownloadReport.module.css';
 
 /*
  * Shared Download report dialog (docs/REPORTS.md, docs/SCREENS.md "Reports and downloads").
- * Port of design/html/DownloadReport.html. Exporting never calls the model, approves tests,
+ * Exporting never calls the model, approves tests,
  * imports into Octane or starts a Harness run.
  */
 

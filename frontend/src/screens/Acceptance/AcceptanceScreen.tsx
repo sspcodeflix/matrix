@@ -1,4 +1,3 @@
-// Reference: design/html/Acceptance.html
 import { useCallback, useMemo, useState, type CSSProperties } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useApi } from '../../api/useApi';
@@ -30,7 +29,7 @@ const criteriaValue = (s: Story) =>
   s.criteriaTotal === 0 || s.criteriaTested === 0 ? 'None' : untested(s) === 0 ? 'All tested' : 'Some untested';
 
 /*
- * Per-story stage (UI_UX_REVIEW C4 and journey review). Stories move independently, so the
+ * Per-story stage. Stories move independently, so the
  * release is shown as counts per stage, not one sequential pipeline. Every count, view, KPI and
  * row action is derived from `stageOf`. The four AI stages (Story analysis, Test cases,
  * Automation, Tagging) are worked in the story workspace; then UAT sign-off and the Octane

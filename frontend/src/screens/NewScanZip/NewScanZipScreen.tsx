@@ -1,4 +1,3 @@
-// Reference: design/html/NewScanZip.html
 import { useEffect, useRef, useState, type DragEvent } from 'react';
 import { useApi } from '../../api/useApi';
 import type { Application } from '../../api/session';

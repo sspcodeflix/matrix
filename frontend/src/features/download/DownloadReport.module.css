@@ -1,4 +1,4 @@
-/* Shared Download report dialog (design/html/DownloadReport.html). Tokens only. */
+/* Shared Download report dialog. Tokens only. */
 .body { display: flex; flex-wrap: wrap; min-height: 100%; }
 .form {
   flex: 3 1 520px; min-width: 0; padding: 18px 20px;

@@ -1,4 +1,3 @@
-// Reference: design/html/Explore.html
 // Journeys data is observed behaviour: use it for how to navigate, never as expected results.
 import { useCallback, useMemo, useState, type CSSProperties } from 'react';
 import { Link } from 'react-router-dom';

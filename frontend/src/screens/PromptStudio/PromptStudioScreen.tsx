@@ -1,4 +1,3 @@
-// Reference: design/html/PromptStudio.html
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { useApi } from '../../api/useApi';
 import { DataTable, type Column } from '../../components/DataTable';

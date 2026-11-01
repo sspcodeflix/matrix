@@ -32,7 +32,7 @@ Owner decisions already made. When a task touches one of these, apply it and tel
 
 ## Where things are
 - `docs/`: the specification. Read `PRODUCT.md`, `ARCHITECTURE.md`, `DATA_MODEL.md`, `SCREENS.md` and `REPORTS.md` before changing behaviour. `BACKLOG.md` is the build order. `OPEN_QUESTIONS.md` lists undecided items: do not guess them; leave a `TODO` and an interface.
-- `design/html/`: static HTML references for every screen (`Dark-*` are dark variants), `design/screenshots/`: their PNGs, `design/tokens.css` / `tokens.json`: colours and fonts.
+- `design/tokens.css` / `tokens.json`: colours and fonts. `design/report-samples/`: sample Excel, PDF and HTML exports (see `docs/REPORTS.md`).
 - `frontend/`: the React app (below). `backend/` (FastAPI) does not exist yet.
 - `examples/`: sample skills for the `matrix-skills` repo.
 
@@ -83,5 +83,5 @@ npm run lint
 
 ## When writing code
 - Match the surrounding code: naming, comment density, file layout.
-- Port new screens from `design/html/<Ref>.html`, treating the matching row in `docs/SCREENS.md` as authoritative where they differ.
+- Build new screens from `docs/SCREENS.md`, reusing the shell, DataTable, Dialog and shared UI in `frontend/src/components/`.
 - Update `docs/` when a decision changes. No em dashes in architecture diagrams.

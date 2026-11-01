@@ -2,7 +2,7 @@ import type { ApprovalBinding, ReviewItem } from './api';
 
 /**
  * State of an "Accept tests and approve PR" request, held by the Review screen so it survives
- * switching items and closing the dialog (UI_UX_REVIEW C1).
+ * switching items and closing the dialog.
  */
 export type ApprovalStatus =
   | { kind: 'pending'; binding: ApprovalBinding }

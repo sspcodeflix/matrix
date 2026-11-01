@@ -1,4 +1,4 @@
-// Reference: design/html/WorkflowProcessing.html (+ design/assets/workflow-control.js), docs/WORKFLOW_CONTROL.md
+// Reference: docs/WORKFLOW_CONTROL.md
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useApi } from '../../api/useApi';

@@ -26,5 +26,5 @@ All data is sample data from each screen's `api.ts`; names and numbers are place
 ## Contents
 - `docs/`: the specification. Read in this order: `PRODUCT.md`, `ARCHITECTURE.md`, `DATA_MODEL.md`, `SCREENS.md`, `INTEGRATIONS.md`, `SECURITY.md`, `METRICS.md`, `FEEDBACK.md`, `REPORTS.md`, `BACKLOG.md` (build order), `OPEN_QUESTIONS.md` (do not guess these).
 - `frontend/`: React, TypeScript and Vite app with every screen.
-- `design/`: tokens (light and dark), HTML screen references, screenshots and report samples.
+- `design/`: tokens (light and dark) and sample report exports.
 - `examples/`: `.matrix/skills.yaml`, the `matrix-skills` layout and a `SecretStore` for user PATs.

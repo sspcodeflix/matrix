@@ -1,4 +1,3 @@
-// Reference: design/html/Main.html (standalone landing page, no AppShell)
 import { Link } from 'react-router-dom';
 import { useApi } from '../../api/useApi';
 import { Icon, MatrixLogo } from '../../components/Icon';

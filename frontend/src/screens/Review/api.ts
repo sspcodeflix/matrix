@@ -218,7 +218,7 @@ export const fetchReviewQueue = () => mock(sample);
 // TODO(backend): PATCH /api/review-items/{id}/tests/{testId} { state, rejection?, steps? }; rejections feed skill proposals.
 export const saveTestDecision = (itemId: string, test: ReviewTest) => mock({ itemId, test });
 
-/** The exact revisions a reviewer saw when they asked for approval (UI_UX_REVIEW C1). */
+/** The exact revisions a reviewer saw when they asked for approval. */
 export interface ApprovalBinding {
   itemId: string;
   /** PR head commit the GitHub review is posted against (`commit_id`). */
